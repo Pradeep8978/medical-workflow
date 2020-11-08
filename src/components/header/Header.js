@@ -15,6 +15,7 @@ const Header = () => {
 
   }
   return (
+    <>
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <span className="navbar-brand">
         Medical Lab Case Management Workflow
@@ -24,6 +25,10 @@ const Header = () => {
         Logout
       </button>}
     </nav>
+    <nav aria-label="breadcrumb">
+
+</nav>
+    </>
   );
 };
 

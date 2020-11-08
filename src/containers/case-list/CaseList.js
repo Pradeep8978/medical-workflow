@@ -6,9 +6,10 @@ import "./CaseList.scss";
 
 const STATUS_LIST = [
     '',
-    'initialted',
+    'initiated',
     'submitted',
-    'approved'
+    'approved',
+    'rejected'
 ];
 
 const CaseList = () => {
@@ -62,7 +63,7 @@ const CaseList = () => {
 
   return (
     <div className="case-list-container container">
-      <button className="btn btn-link mt-3" onClick={() => history.push("/new")}>
+      <button className="btn btn-outline-primary mt-3" onClick={() => history.push("/new")}>
         New Case
       </button>
       <div className="mt-3">
@@ -77,14 +78,14 @@ const CaseList = () => {
           return (
             <div key={caseItem.id} className="card mb-2">
               {/* <img
-                class="card-img-top"
+                className="card-img-top"
                 src={caseItem?.images[0].imgUrl}
                 alt="Card image cap"
                 height={400}
               /> */}
-              <div class="card-body">
-                <h5 class="card-title">{caseItem.title}</h5>
-                <p class="card-text">{caseItem.notes}</p>
+              <div className="card-body">
+                <h5 className="card-title">{caseItem.title}</h5>
+                <p className="card-text">{caseItem.notes}</p>
                 <div>Status: <span className="case-status">{caseItem.status}</span></div>
                 <div className="mt-2 mb-2">{renderActionButtons(caseItem)}</div>
                 {["submitted"].includes(caseItem.status) && (
@@ -105,7 +106,7 @@ const CaseList = () => {
               </div>
             </div>
           );
-        }) : <h3 className="mt-5 text-center">No Records found</h3>}
+        }) : <h1 className="text-center no-records">No Records found</h1>}
       </div>
     </div>
   );

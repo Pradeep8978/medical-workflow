@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import "bootstrap/dist/css/bootstrap.min.css"
 import Header from './components/header/Header';
 import {BrowserRouter, Route, Redirect, Switch} from 'react-router-dom';
