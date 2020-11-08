@@ -53,6 +53,7 @@ const Login = () => {
                     onChange={onChangeValue}
                     id="inputEmail"
                     type="email"
+                    name="email"
                     placeholder="Email address"
                     autoFocus
                     className="form-control rounded-pill border-0 shadow-sm px-4"
@@ -64,6 +65,7 @@ const Login = () => {
                     onChange={onChangeValue}
                     id="inputPassword"
                     type="password"
+                    name="password"
                     placeholder="Password"
                     className="form-control rounded-pill border-0 shadow-sm px-4 "
                   />
